@@ -1,0 +1,29 @@
+version: 0.2
+env:
+  parameter-store:
+    a:"/pankaj/dbname"
+    b:"/pankaj/username"
+    c:"/pankaj/password"
+    d:"/pankaj/localhost-name"
+phases:
+  install:
+    commands:
+      - sudo apt-get update -y 
+  pre_build:
+    commands:
+      - sed 's/database_name_here/a' wp-config.php
+      - sed 's/username_here/b' wp-config.php
+      - sed 's/password_here/c' wp-config.php
+      - sed 's/localhost/d' wp-config.php
+
+      
+  build:
+    commands:
+      - echo Build is started 
+      
+  post_build:
+    commands:
+      - echo Build is completed 
+artifacts:
+  files:
+    - '**/*'
