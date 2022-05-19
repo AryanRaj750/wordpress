@@ -2,10 +2,10 @@ version: 0.2
 run-as: root
 env:
   parameter-store:
-    a:"/pankaj/dbname"
-    b:"/pankaj/username"
-    c:"/pankaj/password"
-    d:"/pankaj/localhost-name"
+    a: "/pankaj/dbname"
+    b: "/pankaj/username"
+    c: "/pankaj/password"
+    d: "/pankaj/localhost-name"
 phases:
   install:
     commands:
