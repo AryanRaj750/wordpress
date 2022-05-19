@@ -1,0 +1,13 @@
+version: 0.0
+os: ubuntu
+files:
+   - source: /
+     destination: /var/www/html
+
+hooks:
+   ApplicationStop:
+     - location: scripts/stop-server.sh
+   AfterInstall:
+     - location: scripts/config-app.sh
+       timeout:30
+       runas: root
