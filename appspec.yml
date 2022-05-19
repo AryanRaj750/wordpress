@@ -9,5 +9,5 @@ hooks:
      - location: scripts/stop-server.sh
    AfterInstall:
      - location: scripts/config-app.sh
-       timeout:30
+       timeout: 30
        runas: root
