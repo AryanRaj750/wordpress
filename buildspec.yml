@@ -1,4 +1,5 @@
 version: 0.2
+run-as: root
 env:
   parameter-store:
     a:"/pankaj/dbname"
@@ -11,10 +12,10 @@ phases:
       - sudo apt-get update -y 
   pre_build:
     commands:
-      - sed 's/database_name_here/a' wp-config.php
-      - sed 's/username_here/b' wp-config.php
-      - sed 's/password_here/c' wp-config.php
-      - sed 's/localhost/d' wp-config.php
+      - sed 's/database_name_here/a/' wp-config.php
+      - sed 's/username_here/b/' wp-config.php
+      - sed 's/password_here/c/' wp-config.php
+      - sed 's/localhost/d/' wp-config.php
 
       
   build:
