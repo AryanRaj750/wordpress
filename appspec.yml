@@ -7,12 +7,12 @@ files:
 hooks:
    ApplicationStop:
      - location: scripts/stop-server.sh
-       runas: root
+       runas: ubuntu
    AfterInstall:
      - location: scripts/config-app.sh
-       runas: root
+       runas: ubuntu
    ApplicationStart:
      - location: scripts/start-server.sh
-       runas: root 
+       runas: ubuntu
        timeout: 30
        
