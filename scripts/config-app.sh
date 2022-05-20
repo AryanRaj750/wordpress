@@ -1,1 +1,1 @@
-sudo sudo chown -R $USER:$USER /var/www/html/wordpress
+sudo sudo chown -R $USER:$USER /var/www/html
