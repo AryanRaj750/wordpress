@@ -12,10 +12,10 @@ phases:
       - sudo apt-get update -y 
   pre_build:
     commands:
-      - sudo sed 's/database_name_here/'$a'/' wp-config.php
-      - sudo sed 's/username_here/'$b'/' wp-config.php
-      - sudo sed 's/password_here/'$c'/' wp-config.php
-      - sudo sed 's/localhost/'$d'/' wp-config.php
+      - sudo sed -i 's/database_name_here/'$a'/' wp-config.php
+      - sudo sed -i 's/username_here/'$b'/' wp-config.php
+      - sudo sed -i 's/password_here/'$c'/' wp-config.php
+      - sudo sed -i 's/localhost/'$d'/' wp-config.php
 
       
   build:
