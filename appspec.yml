@@ -8,10 +8,11 @@ hooks:
    ApplicationStop:
      - location: scripts/stop-server.sh
        runas: root
-   ApplicationStart:
-     - location: scripts/start-server.sh
-       runas: root  
    AfterInstall:
      - location: scripts/config-app.sh
-       timeout: 30
        runas: root
+   ApplicationStart:
+     - location: scripts/start-server.sh
+       runas: root 
+       timeout: 30
+       
