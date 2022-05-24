@@ -1,4 +1,8 @@
 <?php
+define( 'WP_HOME', 'https://pkp.squareops.co.in' );
+define( 'WP_SITEURL', 'https://pkp.squareops.co.in' );
+if (strpos($_SERVER['HTTP_X_FORWARDED_PROTO'], 'https') !== false)
+$_SERVER['HTTPS']='on';
 /**
  * The base configuration for WordPress
  *
